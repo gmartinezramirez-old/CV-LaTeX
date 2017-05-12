@@ -1,0 +1,40 @@
+#!/bin/bash
+
+set -e
+
+cd $(dirname $0)
+
+if [ ! -z "$1" ] ; then
+	OUTPUT_DIR="$1"
+else
+	OUTPUT_DIR="$(pwd)"
+fi
+
+IFS=$'\n'
+SHOULD_BUILD=0
+for source in *.tex ; do
+	OUTPUT_FILE="$(basename $source '.tex').pdf"
+	if [[ ! -f "$OUTPUT_FILE" || `git status -uno | grep "Your branch is behind"` ]] ; then
+		SHOULD_BUILD=1
+	fi
+done
+
+if [[ ${SHOULD_BUILD} -eq 1 ]]; then
+	echo "We are behind, building a new release..."
+	git pull origin master
+	docker pull deigote/cv
+	docker run -it --rm -v "$(pwd)":/cv-src -v "$OUTPUT_DIR":/output -w /cv-out deigote/cv bash -c "\
+		set -e; \
+		cp /cv-src/*.tex . && \
+		cp /cv-src/*.png . && \
+		cp /cv-src/lib/* . && \
+		IFS=$'\n' && \
+		for source in *.tex ; do \
+			echo Building \$source && \
+			lualatex --interaction=batchmode \"\$source\" &> /dev/null && \
+			echo Built \$source ; \
+		done && \
+		mv *.pdf /output"
+else
+	echo "Everything is up to date"
+
