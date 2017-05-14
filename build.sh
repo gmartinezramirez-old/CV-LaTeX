@@ -22,7 +22,7 @@ done
 if [[ ${SHOULD_BUILD} -eq 1 ]]; then
 	echo "We are behind, building a new release..."
 	git pull origin master
-	docker pull deigote/cv
+	docker pull gmartinezramirez/CV-LaTeX
 	docker run -it --rm -v "$(pwd)":/cv-src -v "$OUTPUT_DIR":/output -w /cv-out deigote/cv bash -c "\
 		set -e; \
 		cp /cv-src/*.tex . && \
