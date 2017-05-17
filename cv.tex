@@ -3,18 +3,13 @@
 \documentclass[10pt,letterpaper]{article}
 \usepackage[margin=0.75in]{geometry}
 \usepackage[utf8]{inputenc}
-%--- activation of Charter for text and CMR for math
+%--- Activation of Charter for text and CMR for math
 \usepackage[T1]{fontenc}
+%--- Font: Pagella
+%\usepackage{tgpagella}
+%--- Font: Charter
 \usepackage{charter}
 \usepackage[expert]{mathdesign}
-%\usepackage[urw-garamond]{mathdesign}
-
-
-% Set up the fonts according to options
-%\def\mainfontsize{10pt}
-%\def\mainfontface{charter}
-
-%\usepackage[stretch=10]{microtype}
 %--- Microtype Package
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
 % activate={true,nocompatibility} - activate protrusion and expansion
@@ -27,8 +22,7 @@
 %\subsectionfont{\usefont{T1}{qhv}{b}{n}}
 
 \usepackage{hyperref}
-% Font: Pagella
-%\usepackage{tgpagella}
+
 \usepackage{enumitem}
 \usepackage{indentfirst}
 \pagestyle{empty}
@@ -47,23 +41,9 @@
 	\rule[\fontcharht\font`M]{17.75cm}{0.4pt}\par% raise line up by the height of M in the current font
 }
 
-%Different font for titles
-%\usepackage{titlesec} 
-%\titleformat{\subsection}[hang] {
-%	\usefont{T1}{qhv}{b}{n}\selectfont
-%  } % "qhv" - TeX Gyre Heros, "b" - bold
-%{} 
-%{0em}
-%{\hspace{-0.4pt}\Large \thesection\hspace{0.6em}}
-
-%\setlist[itemize]{leftmargin=*}
-
 \begin{document}
 
-%\usefont{T1}{qhv}{b}{n}
 \begin{center}{\huge \textbf{Gonzalo Martinez Ramirez}}
-
-% NOTE: Alternatively could have used \hfill
 
 Santiago, Chile \ \ \textbullet
 \ \ (+56) 9 9611 2973\ \ \textbullet
@@ -73,16 +53,12 @@ Santiago, Chile \ \ \textbullet
 
 \end{center}
 
-%\linedatRIGHT{\textbf{HOLA}}
-
 \hrule
 \vspace{-1.0em}
 \subsection*{ABOUT ME}
 \vspace{-0.3em}
 \hrule
 \vspace{0.5em}
-
-%\noindent\textbox{Left longer sample text\hfill}\textbox{\hfil Center\hfil}\textbox{\hfill Right}
 
 \noindent I'm seeking a Software Engineering position involving backend systems.
 I give a preference to positions which leverage my background in cluster
@@ -282,23 +258,8 @@ that scales with organizational needs.
 
 \hrule
 \vspace{-1.0em}
-%\subsection*{TECHNICAL COMPETENCES}
-%\begin{minipage}{0.5\textwidth}
-%	\begin{itemize}[label=\textbullet, leftmargin=*]
-%		\item First item 
-%		\item Second item
-%		\item Third item
-%	\end{itemize}
-%\end{minipage}
-%\begin{minipage}{0.5\textwidth}
-%	\begin{itemize}[label=\textbullet, leftmargin=*]
-%		\item First item 
-%        \item Second item
-%        \item Third item
-%\end{itemize}
-%\end{minipage}
 
-\subsection*{SKILLS}
+\subsection*{TECHNICAL SKILLS}
 \begin{description}[labelindent=\parindent]
   \parskip=-0.5em
   \item[Languages:] \textbf{Prefer:} Python, Scala \textbf{Have Used:} Java, Ruby, \CPP, JavaScript, \textbf{Want To Use:} Rust
