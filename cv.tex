@@ -40,7 +40,7 @@
   \rule[\fontcharht\font`M]{17.75cm}{0.4pt}\par% raise line up by the height of M in the current font
 }
 
-\newcommand\titlePersonalInfo[6]{
+\newcommand{\titlePersonalInfo}[6]{
   \begin{center}{\huge \textbf{#1}}
   \\  #2 \ \ \textbullet
     \ \ #3\ \ \textbullet
@@ -50,17 +50,27 @@
   \end{center}
 }
 
+\newcommand{\sectionTitle}[1]{
+  \hrule
+  \vspace{-1.0em} 
+  \subsection*{\uppercase{\textbf{#1}}}
+  \vspace{-0.3em}
+    \hrule
+    \vspace{0.5em}  
+}
 
 \begin{document}
     
   \titlePersonalInfo{Gonzalo Martinez Ramirez}{Santiago, Chile}{(+56) 9 9611 2973}{github.com/gmartinezramirez}{gmartinez.cl}{gmartinezramirez@gmail.com}
   
-  \hrule
-  \vspace{-1.0em}
-  \subsection*{ABOUT ME}
-  \vspace{-0.3em}
-  \hrule
-  \vspace{0.5em}
+  %\hrule
+  %\vspace{-1.0em}
+  %\subsection*{ABOUT ME}
+  %\vspace{-0.3em}
+  %\hrule
+  %\vspace{0.5em}
+  
+  \sectionTitle{About me}
   
   \noindent I'm seeking a Software Engineering position involving backend systems.
   I give a preference to positions which leverage my background in cluster
@@ -71,11 +81,14 @@
   that scales with organizational needs.
   \\
   
-  \hrule
-  \vspace{-1.0em}
-  \subsection*{WORK EXPERIENCE}
-  \hrule
-  \vspace{0.5em}
+  %\hrule
+  %\vspace{-1.0em}
+  %\subsection*{WORK EXPERIENCE}
+  %\hrule
+  %\vspace{0.5em}
+  
+  \sectionTitle{Work Experience}
+  
   \begin{itemize}[leftmargin=*]
     \parskip=-0.6em
     
@@ -214,12 +227,8 @@
   %   \item[Languages:]
   %   Assembly, C, C++, Java, JavaScript, \LaTeX, Python, Ruby (on Rails)
   % \end{description}
-  
-  \hrule
-  \vspace{-1.0em}
-  \subsection*{EDUCATION}
-  \hrule
-  \vspace{0.6em}
+    
+  \sectionTitle{Education}
   
   \begin{itemize}[leftmargin=*]
     \parskip=-0.5em
@@ -258,10 +267,8 @@
     x86 architecture for compilers course.
   \end{itemize}
   
-  \hrule
-  \vspace{-1.0em}
+  \sectionTitle{Technical Skills}
   
-  \subsection*{TECHNICAL SKILLS}
   \begin{description}[labelindent=\parindent]
     \parskip=-0.5em
     \item[Languages:] \textbf{Prefer:} Python, Scala \textbf{Have Used:} Java, Ruby, \CPP, JavaScript, \textbf{Want To Use:} Rust
@@ -269,6 +276,7 @@
   \end{description}
   
   \vspace{-1.0em}
+  
   \begin{center}
     \textbf{Languages - } \textbf{Spanish}: native. \textbf{English}: work level.
   \end{center}
