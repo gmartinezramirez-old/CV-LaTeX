@@ -22,138 +22,140 @@
 %\subsectionfont{\usefont{T1}{qhv}{b}{n}}
 
 \usepackage{hyperref}
-
 \usepackage{enumitem}
 \usepackage{indentfirst}
 \pagestyle{empty}
 
 \newcommand\textbox[1]{%
-	\parbox{.333\textwidth}{#1}%
+  \parbox{.333\textwidth}{#1}%
 }
 
 % Make "C++" look pretty when used in text by touching up the plus signs
 \newcommand{\CPP}
 {C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
 
-\newcommand\linedatRIGHT[1]{% comment out this line-ending
-	\par\noindent\rule{17.75cm}{0.4pt}\par\noindent%
-	#1\par\noindent%
-	\rule[\fontcharht\font`M]{17.75cm}{0.4pt}\par% raise line up by the height of M in the current font
+\newcommand\linedatRIGHT[1]{
+  \par\noindent\rule{17.75cm}{0.4pt}\par\noindent%
+  #1\par\noindent%
+  \rule[\fontcharht\font`M]{17.75cm}{0.4pt}\par% raise line up by the height of M in the current font
 }
 
+\newcommand\titlePersonalInfo[6]{
+  \begin{center}{\huge \textbf{#1}}
+  \\  #2 \ \ \textbullet
+    \ \ #3\ \ \textbullet
+    \ \ #4\ \ \textbullet
+    \ \ #5\ \ \textbullet
+    \ \ #6    
+  \end{center}
+}
+
+
 \begin{document}
-
-\begin{center}{\huge \textbf{Gonzalo Martinez Ramirez}}
-
-Santiago, Chile \ \ \textbullet
-\ \ (+56) 9 9611 2973\ \ \textbullet
-\ \ github.com/gmartinezramirez\ \ \textbullet
-\ \ gmartinez.cl\ \ \textbullet
-\ \ gmartinezramirez@gmail.com
-
-\end{center}
-
-\hrule
-\vspace{-1.0em}
-\subsection*{ABOUT ME}
-\vspace{-0.3em}
-\hrule
-\vspace{0.5em}
-
-\noindent I'm seeking a Software Engineering position involving backend systems.
-I give a preference to positions which leverage my background in cluster
-scheduling and container management with \href{aurora.apache.org}{Apache Aurora}
-and \href{mesos.apache.org}{Apache Mesos}.
-
-\noindent I'm passionate about immutable, reliable, automated infrastructure
-that scales with organizational needs.
-\\
-
-\hrule
-\vspace{-1.0em}
-\subsection*{WORK EXPERIENCE}
-\hrule
-\vspace{0.5em}
+    
+  \titlePersonalInfo{Gonzalo Martinez Ramirez}{Santiago, Chile}{(+56) 9 9611 2973}{github.com/gmartinezramirez}{gmartinez.cl}{gmartinezramirez@gmail.com}
+  
+  \hrule
+  \vspace{-1.0em}
+  \subsection*{ABOUT ME}
+  \vspace{-0.3em}
+  \hrule
+  \vspace{0.5em}
+  
+  \noindent I'm seeking a Software Engineering position involving backend systems.
+  I give a preference to positions which leverage my background in cluster
+  scheduling and container management with \href{aurora.apache.org}{Apache Aurora}
+  and \href{mesos.apache.org}{Apache Mesos}.
+  
+  \noindent I'm passionate about immutable, reliable, automated infrastructure
+  that scales with organizational needs.
+  \\
+  
+  \hrule
+  \vspace{-1.0em}
+  \subsection*{WORK EXPERIENCE}
+  \hrule
+  \vspace{0.5em}
   \begin{itemize}[leftmargin=*]
     \parskip=-0.6em
-
+    
     % Twitter Promotion
     \item[]
     {
-     \textbox{\textbf{Software Engineer II}\hfill}\textbox{\hfil \textbf{Twitter}\hfil}\hfill \textbf{\emph{September 2015 - Present}}
+      \textbox{\textbf{Software Engineer II}\hfill}\textbox{\hfil \textbf{Twitter}\hfil}\hfill \textbf{\emph{September 2015 - Present}}
       %\href{http://www.twitter.com}{\textbf{Twitter}} \hfill
       %\textbf{San Francisco, CA}
     }
-
+    
     \begin{itemize}[label=\textbullet]
       \itemsep0em
       \item Contributed to internal deploy system to allow users to deploy to
-        multiple \href{aurora.apache.org}{Apache Aurora} zones.
+      multiple \href{aurora.apache.org}{Apache Aurora} zones.
       \item Independently worked on reducing technical debt on task specific
-        observability tooling.
+      observability tooling.
       \item Collaborated with many engineers at Twitter to improve internal
-        Python build hygiene.
+      Python build hygiene.
     \end{itemize}
-
-
+    
+    
     % Twitter FT
     \item[]
     {\href{http://www.twitter.com}{\textbf{Twitter}} \hfill
       \textbf{San Francisco, CA}}
     \\
     {\emph{Software Engineer I} \hfill \emph{August 2014 - August 2015}}
-
+    
     \begin{itemize}[label=\textbullet]
       \itemsep0em
       \item Contributed usability fixes to the
-        \href{aurora.apache.org}{Apache Aurora} command line client.
+      \href{aurora.apache.org}{Apache Aurora} command line client.
       \item Created an analytics pipeline to gain better understanding of
-        cluster utilization and allocation.
+      cluster utilization and allocation.
       \item Worked with operators to increase overall reliability of compute
-        cluster.
+      cluster.
     \end{itemize}
-
+    
     % Twitter 2.0
     \item[]
     {\href{http://www.twitter.com}{\textbf{Twitter}} \hfill
       \textbf{San Francisco, CA}}
     \\
     {\emph{Intern} \hfill \emph{September 2013 - December 2013}}
-
+    
     \begin{itemize}[label=\textbullet]
       \itemsep0em
       \item Improved Aurora preemption to terminate multiple low priority tasks
-        in favor of high priority tasks.
+      in favor of high priority tasks.
       \item Enhanced scheduling algorithm to penalize short lived tasks to
-        reduce wasted scheduling attempts.
+      reduce wasted scheduling attempts.
     \end{itemize}
-
+    
     % Twitter
     \item[]
     {\href{http://www.twitter.com}{\textbf{Twitter}} \hfill
       \textbf{San Francisco, CA}}
     \\
     {\emph{Intern} \hfill \emph{January 2013 - April 2013}}
-
+    
     \begin{itemize}[label=\textbullet]
       \itemsep0em
       \item Designed and implemented a stream filtering system on top of Apache
-        Kafka to reduce stream size.
+      Kafka to reduce stream size.
       \item Created a DSL for operators to filter streams of arbitrary Thrift
-        messages.
+      messages.
     \end{itemize}
-
+    
     % DISQUS
     \item[]
     {\href{http://www.disqus.com}{\textbf{DISQUS}} \hfill
       \textbf{San Francisco, CA}}
     \\
     {\emph{Intern} \hfill \emph{May 2012 - August 2012}}
-
+    
     \begin{itemize}[label=\textbullet]
       \itemsep0em
       \item Worked on performance measurement tools to catch regressions before
-        systems were deployed.
+      systems were deployed.
       % \item Worked on performance measurement tools forming the basis for the
       %       open source projects:
       %       \href{https://github.com/disqus/nose-performance}{\textit{nose-performance}}
@@ -161,114 +163,114 @@ that scales with organizational needs.
       % \item Independently integrated code review and testing servers to test
       %       patches before they were committed.
     \end{itemize}
-
-
+    
+    
     % TWG
     \item[]
     {\href{http://www.twg.ca}{\textbf{The Working Group}} \hfill
       \textbf{Toronto, ON}}
     \\
     {\emph{Intern} \hfill \emph{September 2011 - December 2011}}
-
+    
     \begin{itemize}[label=\textbullet]
       \itemsep0em
       \item Full stack work using Ruby on Rails and JavaScript projects for various
-        clients.
+      clients.
     \end{itemize}
-
+    
     % Xtreme
     \item[]
     {\href{http://www.xtremelabs.com/}{\textbf{Xtreme Labs}} \hfill
       \textbf{Toronto, ON}}
     \\
     {\emph{Intern} \hfill \emph{January 2011 - April 2011}}
-
+    
     \begin{itemize}[label=\textbullet]
       \itemsep0em
       \item Full stack work using Ruby on Rails and JavaScript for an OpenX
-        based mobile ad network.
+      based mobile ad network.
     \end{itemize}
-
+    
     % Trapeze
     \item[]
     {\href{http://www.trapezegroup.com/}{\textbf{Trapeze Group}} \hfill
       \textbf{Mississauga, ON}}
     \\
     {\emph{Intern} \hfill \emph{May 2010 - August 2010}}
-
+    
     \begin{itemize}[label=\textbullet]
       \itemsep0em
       \item Improved web interface and search functionality on bus dispatch
-        application for transportation agencies.
+      application for transportation agencies.
     \end{itemize}
   \end{itemize}
-
-
-% TODO(zmanji): Revise this. Turn it into a 'Keywords' section?
-% \hrule
-% \vspace{-0.4em}
-% \subsection*{Technical Skills}
-% \begin{description}[labelindent=\parindent]
-%   \item[Languages:]
-%   Assembly, C, C++, Java, JavaScript, \LaTeX, Python, Ruby (on Rails)
-% \end{description}
-
-\hrule
-\vspace{-1.0em}
-\subsection*{EDUCATION}
-\hrule
-\vspace{0.6em}
-
+  
+  
+  % TODO(zmanji): Revise this. Turn it into a 'Keywords' section?
+  % \hrule
+  % \vspace{-0.4em}
+  % \subsection*{Technical Skills}
+  % \begin{description}[labelindent=\parindent]
+  %   \item[Languages:]
+  %   Assembly, C, C++, Java, JavaScript, \LaTeX, Python, Ruby (on Rails)
+  % \end{description}
+  
+  \hrule
+  \vspace{-1.0em}
+  \subsection*{EDUCATION}
+  \hrule
+  \vspace{0.6em}
+  
   \begin{itemize}[leftmargin=*]
     \parskip=-0.5em
-
+    
     \item[]
     {\textbf{University of Santiago} \hfill
-     \textbf{Waterloo, ON}
+      \textbf{Waterloo, ON}
     }
     \\
     {\emph{Bachelor of Software Engineering} \hfill
       \emph{September 2009 - June 2014}}
-
+    
     \begin{itemize}[label=\textbullet]
       \item Related Coursework: Compilers, Programming Languages, Operating
-        Systems, Distributed Systems.
+      Systems, Distributed Systems.
       \item Proposed patches to eCryptfs file system to support
-        integrity protecting cipher modes for design project.
+      integrity protecting cipher modes for design project.
       \item Created a compiler for a subset of Java 1.3 for the
-        x86 architecture for compilers course.
+      x86 architecture for compilers course.
     \end{itemize}
   \end{itemize}
-
-\begin{tabular}{lllc}	
-	\textbf{University of Santiago}&Santiago, Chile& & \\
-	$\bullet$  \textbf{M.S. in Computer Science (c)}& March 2010 – Expected December 2017. & GPA: 5.2/7.0 & \\
-	$\bullet$  \textbf{Computer Science Engineering} & March 2010 – Expected December 2017. & GPA: 5.2/7.0 & \\
-	$\bullet$  \textbf{B.S. in Engineering} & March 2010 – Septiembre 2015. & GPA: 5.2/7.0  &\\
-\end{tabular}
-
-\begin{itemize}[label=\textbullet]
-	\item Related Coursework: Compilers, Programming Languages, Operating
-	Systems, Distributed Systems.
-	\item Proposed patches to eCryptfs file system to support
-	integrity protecting cipher modes for design project.
-	\item Created a compiler for a subset of Java 1.3 for the
-	x86 architecture for compilers course.
-\end{itemize}
-
-\hrule
-\vspace{-1.0em}
-
-\subsection*{TECHNICAL SKILLS}
-\begin{description}[labelindent=\parindent]
-  \parskip=-0.5em
-  \item[Languages:] \textbf{Prefer:} Python, Scala \textbf{Have Used:} Java, Ruby, \CPP, JavaScript, \textbf{Want To Use:} Rust
-  \item[Systems:] Apache Aurora, Apache Mesos, Docker, Private Cloud
-\end{description}
-
-\vspace{-1.0em}
-\begin{center}
-	\textbf{Languages - } \textbf{Spanish}: native. \textbf{English}: work level.
-\end{center}
-
+  
+  \begin{tabular}{lllc} 
+    \textbf{University of Santiago}&Santiago, Chile& & \\
+    $\bullet$  \textbf{M.S. in Computer Science (c)}& March 2010 – Expected December 2017. & GPA: 5.2/7.0 & \\
+    $\bullet$  \textbf{Computer Science Engineering} & March 2010 – Expected December 2017. & GPA: 5.2/7.0 & \\
+    $\bullet$  \textbf{B.S. in Engineering} & March 2010 – Septiembre 2015. & GPA: 5.2/7.0  &\\
+  \end{tabular}
+  
+  \begin{itemize}[label=\textbullet]
+    \item Related Coursework: Compilers, Programming Languages, Operating
+    Systems, Distributed Systems.
+    \item Proposed patches to eCryptfs file system to support
+    integrity protecting cipher modes for design project.
+    \item Created a compiler for a subset of Java 1.3 for the
+    x86 architecture for compilers course.
+  \end{itemize}
+  
+  \hrule
+  \vspace{-1.0em}
+  
+  \subsection*{TECHNICAL SKILLS}
+  \begin{description}[labelindent=\parindent]
+    \parskip=-0.5em
+    \item[Languages:] \textbf{Prefer:} Python, Scala \textbf{Have Used:} Java, Ruby, \CPP, JavaScript, \textbf{Want To Use:} Rust
+    \item[Systems:] Apache Aurora, Apache Mesos, Docker, Private Cloud
+  \end{description}
+  
+  \vspace{-1.0em}
+  \begin{center}
+    \textbf{Languages - } \textbf{Spanish}: native. \textbf{English}: work level.
+  \end{center}
+  
 \end{document}
