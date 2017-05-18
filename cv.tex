@@ -66,6 +66,24 @@
   \end{center}
 }
 
+\newcommand{\titleExperienceWithoutLocation}[3]{
+  \item[]
+  {
+    \textbox{\textbf{#1}\hfill}\textbox{\hfil \textbf{#2}\hfil}\hfill \textbf{\emph{#3}}
+  }
+}
+
+\newcommand{\titleExperienceWithLocation}[4]{
+  \item[]
+  {
+    \textbf{#1} \hfill
+    \textbf{#2}
+  }
+  \\{\emph{#3} \hfill \emph{#4}}
+}
+
+
+
 \begin{document}
     
   \titlePersonalInfo{Gonzalo Martinez Ramirez}{Santiago, Chile}{(+56) 9 9611 2973}{github.com/gmartinezramirez}{gmartinez.cl}{gmartinezramirez@gmail.com}
@@ -82,18 +100,10 @@
   \\
   
   \sectionTitle{Work Experience}
-  
   \begin{itemize}[leftmargin=*]
     \parskip=-0.6em
     
-    % Twitter Promotion
-    \item[]
-    {
-      \textbox{\textbf{Software Engineer II}\hfill}\textbox{\hfil \textbf{Twitter}\hfil}\hfill \textbf{\emph{September 2015 - Present}}
-      %\href{http://www.twitter.com}{\textbf{Twitter}} \hfill
-      %\textbf{San Francisco, CA}
-    }
-    
+    \titleExperienceWithoutLocation{Software Engineer II}{Twitter}{September 2015 - Present}
     \begin{itemize}[label=\textbullet]
       \itemsep0em
       \item Contributed to internal deploy system to allow users to deploy to
@@ -104,14 +114,7 @@
       Python build hygiene.
     \end{itemize}
     
-    
-    % Twitter FT
-    \item[]
-    {\href{http://www.twitter.com}{\textbf{Twitter}} \hfill
-      \textbf{San Francisco, CA}}
-    \\
-    {\emph{Software Engineer I} \hfill \emph{August 2014 - August 2015}}
-    
+    \titleExperienceWithoutLocation{Twitter}{Software Engineer I}{August 2014 - August 2015}
     \begin{itemize}[label=\textbullet]
       \itemsep0em
       \item Contributed usability fixes to the
@@ -122,13 +125,7 @@
       cluster.
     \end{itemize}
     
-    % Twitter 2.0
-    \item[]
-    {\href{http://www.twitter.com}{\textbf{Twitter}} \hfill
-      \textbf{San Francisco, CA}}
-    \\
-    {\emph{Intern} \hfill \emph{September 2013 - December 2013}}
-    
+    \titleExperienceWithoutLocation{Twitter}{Intern}{September 2013 - December 2013}
     \begin{itemize}[label=\textbullet]
       \itemsep0em
       \item Improved Aurora preemption to terminate multiple low priority tasks
@@ -137,13 +134,7 @@
       reduce wasted scheduling attempts.
     \end{itemize}
     
-    % Twitter
-    \item[]
-    {\href{http://www.twitter.com}{\textbf{Twitter}} \hfill
-      \textbf{San Francisco, CA}}
-    \\
-    {\emph{Intern} \hfill \emph{January 2013 - April 2013}}
-    
+    \titleExperienceWithoutLocation{Twitter}{Intern}{January 2013 - April 2013}
     \begin{itemize}[label=\textbullet]
       \itemsep0em
       \item Designed and implemented a stream filtering system on top of Apache
@@ -152,78 +143,19 @@
       messages.
     \end{itemize}
     
-    % DISQUS
-    \item[]
-    {\href{http://www.disqus.com}{\textbf{DISQUS}} \hfill
-      \textbf{San Francisco, CA}}
-    \\
-    {\emph{Intern} \hfill \emph{May 2012 - August 2012}}
-    
+    \titleExperienceWithLocation{DISQUS}{San Francisco, CA}{Intern}{May 2012 - August 2012}
     \begin{itemize}[label=\textbullet]
       \itemsep0em
       \item Worked on performance measurement tools to catch regressions before
       systems were deployed.
-      % \item Worked on performance measurement tools forming the basis for the
-      %       open source projects:
-      %       \href{https://github.com/disqus/nose-performance}{\textit{nose-performance}}
-      %       and \href{https://github.com/disqus/zumanji}{\textit{Zumanji}}.
-      % \item Independently integrated code review and testing servers to test
-      %       patches before they were committed.
     \end{itemize}
     
     
-    % TWG
-    \item[]
-    {\href{http://www.twg.ca}{\textbf{The Working Group}} \hfill
-      \textbf{Toronto, ON}}
-    \\
-    {\emph{Intern} \hfill \emph{September 2011 - December 2011}}
-    
-    \begin{itemize}[label=\textbullet]
-      \itemsep0em
-      \item Full stack work using Ruby on Rails and JavaScript projects for various
-      clients.
-    \end{itemize}
-    
-    % Xtreme
-    \item[]
-    {\href{http://www.xtremelabs.com/}{\textbf{Xtreme Labs}} \hfill
-      \textbf{Toronto, ON}}
-    \\
-    {\emph{Intern} \hfill \emph{January 2011 - April 2011}}
-    
-    \begin{itemize}[label=\textbullet]
-      \itemsep0em
-      \item Full stack work using Ruby on Rails and JavaScript for an OpenX
-      based mobile ad network.
-    \end{itemize}
-    
-    % Trapeze
-    \item[]
-    {\href{http://www.trapezegroup.com/}{\textbf{Trapeze Group}} \hfill
-      \textbf{Mississauga, ON}}
-    \\
-    {\emph{Intern} \hfill \emph{May 2010 - August 2010}}
-    
-    \begin{itemize}[label=\textbullet]
-      \itemsep0em
-      \item Improved web interface and search functionality on bus dispatch
-      application for transportation agencies.
-    \end{itemize}
+  
   \end{itemize}
   
   
-  % TODO(zmanji): Revise this. Turn it into a 'Keywords' section?
-  % \hrule
-  % \vspace{-0.4em}
-  % \subsection*{Technical Skills}
-  % \begin{description}[labelindent=\parindent]
-  %   \item[Languages:]
-  %   Assembly, C, C++, Java, JavaScript, \LaTeX, Python, Ruby (on Rails)
-  % \end{description}
-    
-  \sectionTitle{Education}
-  
+  \sectionTitle{Education}  
   \begin{itemize}[leftmargin=*]
     \parskip=-0.5em
     
@@ -247,9 +179,9 @@
   
   \begin{tabular}{lllc} 
     \textbf{University of Santiago}&Santiago, Chile& & \\
-    $\bullet$  \textbf{M.S. in Computer Science (c)}& March 2010 – Expected December 2017. & GPA: 5.2/7.0 & \\
-    $\bullet$  \textbf{Computer Science Engineering} & March 2010 – Expected December 2017. & GPA: 5.2/7.0 & \\
-    $\bullet$  \textbf{B.S. in Engineering} & March 2010 – Septiembre 2015. & GPA: 5.2/7.0  &\\
+    $\bullet$ \textbf{M.S. in Computer Science (c)}& March 2010 – Expected December 2017. & GPA: 5.2/7.0 & \\
+    $\bullet$ \textbf{Computer Science Engineering} & March 2010 – Expected December 2017. & GPA: 5.2/7.0 & \\
+    $\bullet$ \textbf{B.S. in Engineering} & March 2010 – Septiembre 2015. & GPA: 5.2/7.0  &\\
   \end{tabular}
   
   \begin{itemize}[label=\textbullet]
