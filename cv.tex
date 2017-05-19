@@ -23,11 +23,13 @@
 
 \usepackage{hyperref}
 \usepackage{enumitem}
+
 \usepackage{indentfirst}
+\usepackage{fmtcount}
 \pagestyle{empty}
 
-\newcommand\textbox[1]{%
-  \parbox{.333\textwidth}{#1}%
+\newcommand{\textbox}[1]{
+  \parbox{.333\textwidth}{#1}
 }
 
 % Make "C++" look pretty when used in text by touching up the plus signs
@@ -62,7 +64,7 @@
 \newcommand{\languageSection}[4]{
   \vspace{-0.5em}
   \begin{center}
-    \textbf{Languages - } \textbf{#1}: #2. \textbf{#3}: #4.
+    \textbf{Languages \textendash \ }\textbf{#1}: #2. \textbf{#3}: #4.
   \end{center}
 }
 
@@ -140,72 +142,109 @@
   
   \begin{description}[labelindent=\parindent]
     \parskip=-0.6em
-    \item [Graduate Coursework:] Compilers, Programming Languages, Operating Systems, Distributed Systems.
-    \item [Undergraduated Coursework:] Compilers, Programming Languages, Operating Systems, Distributed Systems.
+    \item [Graduate Coursework:] Scalable Distributed Systems, Human Computer and Information Retrieval, Object-Oriented Programming, Evolutionary Computation.
+    \item [Undergraduated Coursework:] Computer Architecture, Algorithms, Parallel Computing, Operating Systems, Data Structures, Distributed Systems, Compilers, Paradigms of Programming, Databases, Computational Theory.
   \end{description}
   
   \sectionTitle{Work Experience}
   \begin{itemize}[leftmargin=*]
     \parskip=-0.6em
+    \titleExperienceWithoutLocation{Research Assistant}{University of Santiago}{March 2016}{Present}
+      \begin{itemize}[label=\textbullet]
+        \itemsep0em
+        \item Contributed to internal deploy system to allow users to deploy to multiple Apache Aurora zones.
+        \item Independently worked on reducing technical debt on task specific observability tooling.
+        \item Collaborated with many engineers at Twitter to improve internal Python build hygiene.
+      \end{itemize}
+
+    \titleExperienceWithoutLocation{Web Developer}{Self-employed}{March 2015}{January 2017}
+      \begin{itemize}[label=\textbullet]
+        \itemsep0em
+        \item Contributed usability fixes to the Apache Aurora command line client.
+        \item Created an analytics pipeline to gain better understanding of cluster utilization and allocation.
+        \item Worked with operators to increase overall reliability of compute cluster.
+      \end{itemize}
     
-  \titleExperienceWithoutLocation{Software Engineer II}{Twitter}{September 2015}{Present}
-    \begin{itemize}[label=\textbullet]
-      \itemsep0em
-      \item Contributed to internal deploy system to allow users to deploy to
-      multiple \href{aurora.apache.org}{Apache Aurora} zones.
-      \item Independently worked on reducing technical debt on task specific
-      observability tooling.
-      \item Collaborated with many engineers at Twitter to improve internal
-      Python build hygiene.
-    \end{itemize}
+    \titleExperienceWithoutLocation{Teaching Assistant}{University of Santiago}{March 2012}{December 2016}
+      \begin{itemize}[label=\textbullet]
+        \itemsep0em
+        \item Conducted interactive discussions on a weekly basis. Subjects: \underline{Evolutionary Computation} (2016), \underline{Programming Paradigms} (2015–2016), \underline{Methods of Programming} (2013), \underline{Linear Algebra} (2013 – 2014) \underline{Introduction to Computer Programming} (2012–2016), \underline{Calculus I} (2012–2015).
+        \item Enhanced scheduling algorithm to penalize short lived tasks to reduce wasted scheduling attempts.
+      \end{itemize}
     
-  \titleExperienceWithoutLocation{Twitter}{Software Engineer I}{August 2014}{August 2015}
-    \begin{itemize}[label=\textbullet]
-      \itemsep0em
-      \item Contributed usability fixes to the
-      \href{aurora.apache.org}{Apache Aurora} command line client.
-      \item Created an analytics pipeline to gain better understanding of
-      cluster utilization and allocation.
-      \item Worked with operators to increase overall reliability of compute
-      cluster.
-    \end{itemize}
+    \titleExperienceWithoutLocation{Twitter}{Intern}{January 2013}{April 2013}
+      \begin{itemize}[label=\textbullet]
+        \itemsep0em
+        \item Designed and implemented a stream filtering system on top of Apache Kafka to reduce stream size.
+        \item Created a DSL for operators to filter streams of arbitrary Thrift messages.
+      \end{itemize}
     
-  \titleExperienceWithoutLocation{Twitter}{Intern}{September 2013}{December 2013}
-    \begin{itemize}[label=\textbullet]
-      \itemsep0em
-      \item Improved Aurora preemption to terminate multiple low priority tasks
-      in favor of high priority tasks.
-      \item Enhanced scheduling algorithm to penalize short lived tasks to
-      reduce wasted scheduling attempts.
-    \end{itemize}
-    
-  \titleExperienceWithoutLocation{Twitter}{Intern}{January 2013}{April 2013}
-    \begin{itemize}[label=\textbullet]
-      \itemsep0em
-      \item Designed and implemented a stream filtering system on top of Apache
-      Kafka to reduce stream size.
-      \item Created a DSL for operators to filter streams of arbitrary Thrift
-      messages.
-    \end{itemize}
-    
-  \titleExperienceWithLocation{DISQUS}{San Francisco, CA}{Intern}{May 2012}{August 2012}
-    \begin{itemize}[label=\textbullet]
-      \itemsep0em
-      \item Worked on performance measurement tools to catch regressions before
-      systems were deployed.
-    \end{itemize}
-    
+    \titleExperienceWithoutLocation{DISQUS}{Intern}{May 2012}{August 2012}
+      \begin{itemize}[label=\textbullet]
+        \itemsep0em
+        \item Worked on performance measurement tools to catch regressions before systems were deployed.
+      \end{itemize}
   \end{itemize}
   
 %--TODO: Make to work with +9 parameters
 % \educationWithGPA{University of Santiago}{Santiago, Chile}{M.S. in Computer Science (c)}{March 2010}{Expected December 2017}{5.2}{Computer Science Engineering}{March 2010}{Expected December 2017}{5.2}{B.S. in Engineering}{March 2010}{Septiembre 2015}{5.2}
   %\noindent
 
+  \sectionTitle{Projects}
+  \begin{itemize}[leftmargin=*]
+    \parskip=-0.6em 
+    \titleExperienceWithoutLocation{Project 1 C, \CPP}{github.com/gmartinezramirez/project1}{September 2015}{Present}
+      \begin{itemize}[label=\textbullet]
+        \itemsep0em
+        \item Contributed to internal deploy system to allow users to deploy to multiple Apache Aurora zones.
+      \end{itemize}
+  
+    \titleExperienceWithoutLocation{Project 2}{github.com/gmartinezramirez/project2}{August 2014}{August 2015}
+      \begin{itemize}[label=\textbullet]
+        \itemsep0em
+        \item Contributed usability fixes to the Apache Aurora command line client.
+      \end{itemize}
+
+    \titleExperienceWithoutLocation{Project 3}{github.com/gmartinezramirez/project3}{August 2014}{August 2015}
+      \begin{itemize}[label=\textbullet]
+        \itemsep0em
+        \item Contributed usability fixes to the Apache Aurora command line client.
+      \end{itemize}
+  \end{itemize}
+
+  \sectionTitle{Events and Organizations}
+  \begin{itemize}[leftmargin=*]
+    \parskip=-0.6em 
+    \titleExperienceWithoutLocation{Active Member}{GNU/Linux University Community}{September 2015}{Present}
+      \begin{itemize}[label=\textbullet]
+        \itemsep0em
+        \item Contributed to internal deploy system to allow users to deploy to multiple Apache Aurora zones.
+      \end{itemize}
+  
+    \titleExperienceWithoutLocation{Team Member}{Facebook Hackathon}{September 2015}{Present}
+      \begin{itemize}[label=\textbullet]
+        \itemsep0em
+        \item Contributed to internal deploy system to allow users to deploy to multiple Apache Aurora zones.
+      \end{itemize}
+  
+    \titleExperienceWithoutLocation{Team Member}{NASA Space Apps Hackathon}{August 2014}{August 2015}
+      \begin{itemize}[label=\textbullet]
+        \itemsep0em
+        \item Contributed usability fixes to the Apache Aurora command line client.
+      \end{itemize}
+
+    \titleExperienceWithoutLocation{Publications}{Co-Author}{}{}
+      \begin{itemize}[label=\textbullet]
+        \itemsep0em
+        \item Effects of Visual Representation of Search Engine Results on Performance, User Experience, and Visual Effort. ASIS\&T 2017, \ordinalnum{80} Annual Meeting of the Association for Information Science and Technology, Washington D.C (Crystal City, Virginia), USA.
+      \end{itemize}
+    \end{itemize} 
   
   \sectionTitle{Languages and Technologies}
   \vspace{0.5em}
   \begin{description}[labelindent=\parindent]
     \parskip=-0.6em
+    %\itemsep0em
     \item [Languages:] \textbf{Proficient:} Java, Python \textbf{Prior experience:} \CPP, Scala, Go, JavaScript
     \item [Frameworks:] \textbf{Prior experience:} Hadoop, Spark
     \item [Databases:] \textbf{Prior experience:} Redis, PostgreSQL, MongoDB, Cassandra
