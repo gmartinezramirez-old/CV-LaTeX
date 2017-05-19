@@ -60,13 +60,14 @@
 }
 
 \newcommand{\languageSection}[4]{
-  \vspace{-1.0em}
+  \vspace{-0.5em}
   \begin{center}
     \textbf{Languages - } \textbf{#1}: #2. \textbf{#3}: #4.
   \end{center}
 }
 
 \newcommand{\titleExperienceWithoutLocation}[4]{
+  \vspace{1.0em}
   \item[]
   {
     \textbox{\textbf{#1}\hfill}\textbox{\hfil \textbf{#2}\hfil}\hfill \textbf{\emph{#3 \textendash \ #4}}
@@ -74,6 +75,7 @@
 }
 
 \newcommand{\titleExperienceWithLocation}[5]{
+  \vspace{1.0em}
   \item[]
   {
     \textbf{#1} \hfill
@@ -82,28 +84,71 @@
   \\{\emph{#3} \hfill \emph{#4 \textendash \ #5}}
 }
 
-
+%\newcommand{\educationWithGPA}[9]{
+% \begin{tabular}{lllc} 
+% \textbf{#1}&#2& & \\
+% $\bullet$ \textbf{#3}& #4 \textendash #5. & GPA: #6/7.0 & \\
+% $\bullet$ \textbf{#7} & #8 \textendash #9. & GPA: #10/7.0 & \\
+% $\bullet$ \textbf{#11} & #12 \textendash #13. & GPA: #14/7.0  &\\
+ %   \end{tabular}
+%} 
 
 \begin{document}
     
   \titlePersonalInfo{Gonzalo Martinez Ramirez}{Santiago, Chile}{(+56) 9 9611 2973}{github.com/gmartinezramirez}{gmartinez.cl}{gmartinezramirez@gmail.com}
   
-  \sectionTitle{About me}
+  %\sectionTitle{About me}
+  %\vspace{0.5em}
+  %\noindent I'm seeking a Software Engineering position involving backend systems.
+  %I give a preference to positions which leverage my background in cluster
+  %scheduling and container management with \href{aurora.apache.org}{Apache Aurora}
+  %and \href{mesos.apache.org}{Apache Mesos}.
   
-  \noindent I'm seeking a Software Engineering position involving backend systems.
-  I give a preference to positions which leverage my background in cluster
-  scheduling and container management with \href{aurora.apache.org}{Apache Aurora}
-  and \href{mesos.apache.org}{Apache Mesos}.
+  %\noindent I'm passionate about immutable, reliable, automated infrastructure
+  %that scales with organizational needs.
+  %\\
   
-  \noindent I'm passionate about immutable, reliable, automated infrastructure
-  that scales with organizational needs.
-  \\
+  \sectionTitle{Education}
+  \vspace{0.5em}  
+%\begin{itemize}[leftmargin=*]
+% \parskip=-0.5em 
+% \item[]
+% {\textbf{University of Santiago} \hfill
+%   \textbf{Waterloo, ON}
+% }
+% \\
+% {\emph{Bachelor of Software Engineering} \hfill
+%   \emph{September 2009 - June 2014}}
+% 
+% \begin{itemize}[label=\textbullet]
+%   \item Related Coursework: Compilers, Programming Languages, Operating
+%   Systems, Distributed Systems.
+%   \item Proposed patches to eCryptfs file system to support
+%   integrity protecting cipher modes for design project.
+%   \item Created a compiler for a subset of Java 1.3 for the
+%   x86 architecture for compilers course.
+% \end{itemize}
+%\end{itemize}
+
+%\noindent
+  \begin{tabular}{lllc}
+    \textbf{University of Santiago}&Santiago, Chile.& & \\
+    $\bullet$ \textbf{M.S.E. in Computer Science (c)}& March 2010 \textendash  \ Expected December 2017. & GPA: 5.2/7.0 & \\ [0em]
+    $\bullet$ \textbf{Computer Science Engineering} & March 2010 \textendash \  Expected December 2017. & GPA: 5.2/7.0 & \\ [0em]
+    $\bullet$ \textbf{B.S.E. in Computer Science Engineering} & March 2010 \textendash \  Septiembre 2015. & GPA: 5.2/7.0  &\\
+  \end{tabular}
+  
+  \begin{description}[labelindent=\parindent]
+    \parskip=-0.6em
+    \item [Graduate Coursework:] Compilers, Programming Languages, Operating Systems, Distributed Systems.
+    \item [Undergraduated Coursework:] Compilers, Programming Languages, Operating Systems, Distributed Systems.
+  \end{description}
   
   \sectionTitle{Work Experience}
   \begin{itemize}[leftmargin=*]
     \parskip=-0.6em
     
-    \titleExperienceWithoutLocation{Software Engineer II}{Twitter}{September 2015}{Present}
+  \titleExperienceWithoutLocation{Software Engineer II}{Twitter}{September 2015}{Present}
     \begin{itemize}[label=\textbullet]
       \itemsep0em
       \item Contributed to internal deploy system to allow users to deploy to
@@ -114,7 +159,7 @@
       Python build hygiene.
     \end{itemize}
     
-    \titleExperienceWithoutLocation{Twitter}{Software Engineer I}{August 2014}{August 2015}
+  \titleExperienceWithoutLocation{Twitter}{Software Engineer I}{August 2014}{August 2015}
     \begin{itemize}[label=\textbullet]
       \itemsep0em
       \item Contributed usability fixes to the
@@ -125,7 +170,7 @@
       cluster.
     \end{itemize}
     
-    \titleExperienceWithoutLocation{Twitter}{Intern}{September 2013}{December 2013}
+  \titleExperienceWithoutLocation{Twitter}{Intern}{September 2013}{December 2013}
     \begin{itemize}[label=\textbullet]
       \itemsep0em
       \item Improved Aurora preemption to terminate multiple low priority tasks
@@ -134,7 +179,7 @@
       reduce wasted scheduling attempts.
     \end{itemize}
     
-    \titleExperienceWithoutLocation{Twitter}{Intern}{January 2013}{April 2013}
+  \titleExperienceWithoutLocation{Twitter}{Intern}{January 2013}{April 2013}
     \begin{itemize}[label=\textbullet]
       \itemsep0em
       \item Designed and implemented a stream filtering system on top of Apache
@@ -143,7 +188,7 @@
       messages.
     \end{itemize}
     
-    \titleExperienceWithLocation{DISQUS}{San Francisco, CA}{Intern}{May 2012}{August 2012}
+  \titleExperienceWithLocation{DISQUS}{San Francisco, CA}{Intern}{May 2012}{August 2012}
     \begin{itemize}[label=\textbullet]
       \itemsep0em
       \item Worked on performance measurement tools to catch regressions before
@@ -152,49 +197,19 @@
     
   \end{itemize}
   
-  \sectionTitle{Education}  
-  \begin{itemize}[leftmargin=*]
-    \parskip=-0.5em
-    
-    \item[]
-    {\textbf{University of Santiago} \hfill
-      \textbf{Waterloo, ON}
-    }
-    \\
-    {\emph{Bachelor of Software Engineering} \hfill
-      \emph{September 2009 - June 2014}}
-    
-    \begin{itemize}[label=\textbullet]
-      \item Related Coursework: Compilers, Programming Languages, Operating
-      Systems, Distributed Systems.
-      \item Proposed patches to eCryptfs file system to support
-      integrity protecting cipher modes for design project.
-      \item Created a compiler for a subset of Java 1.3 for the
-      x86 architecture for compilers course.
-    \end{itemize}
-  \end{itemize}
+%--TODO: Make to work with +9 parameters
+% \educationWithGPA{University of Santiago}{Santiago, Chile}{M.S. in Computer Science (c)}{March 2010}{Expected December 2017}{5.2}{Computer Science Engineering}{March 2010}{Expected December 2017}{5.2}{B.S. in Engineering}{March 2010}{Septiembre 2015}{5.2}
+  %\noindent
+
   
-  \begin{tabular}{lllc} 
-    \textbf{University of Santiago}&Santiago, Chile& & \\
-    $\bullet$ \textbf{M.S. in Computer Science (c)}& March 2010 – Expected December 2017. & GPA: 5.2/7.0 & \\
-    $\bullet$ \textbf{Computer Science Engineering} & March 2010 – Expected December 2017. & GPA: 5.2/7.0 & \\
-    $\bullet$ \textbf{B.S. in Engineering} & March 2010 – Septiembre 2015. & GPA: 5.2/7.0  &\\
-  \end{tabular}
-  
-  \begin{itemize}[label=\textbullet]
-    \item Related Coursework: Compilers, Programming Languages, Operating
-    Systems, Distributed Systems.
-    \item Proposed patches to eCryptfs file system to support
-    integrity protecting cipher modes for design project.
-    \item Created a compiler for a subset of Java 1.3 for the
-    x86 architecture for compilers course.
-  \end{itemize}
-  
-  \sectionTitle{Technical Skills}
+  \sectionTitle{Languages and Technologies}
+  \vspace{0.5em}
   \begin{description}[labelindent=\parindent]
-    \parskip=-0.5em
-    \item[Languages:] \textbf{Prefer:} Python, Scala \textbf{Have Used:} Java, Ruby, \CPP, JavaScript, \textbf{Want To Use:} Rust
-    \item[Systems:] Apache Aurora, Apache Mesos, Docker, Private Cloud
+    \parskip=-0.6em
+    \item [Languages:] \textbf{Proficient:} Java, Python \textbf{Prior experience:} \CPP, Scala, Go, JavaScript
+    \item [Frameworks:] \textbf{Prior experience:} Hadoop, Spark
+    \item [Databases:] \textbf{Prior experience:} Redis, PostgreSQL, MongoDB, Cassandra
+    \item [Systems:] Apache Aurora, Apache Mesos, Docker, Private Cloud
   \end{description}
   
   \languageSection{Spanish}{native}{English}{work level}
