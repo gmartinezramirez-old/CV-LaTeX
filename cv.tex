@@ -34,7 +34,8 @@
 \usepackage{fmtcount}
 
 \usepackage{hyphenat}
-
+%--- More control to underline
+\usepackage{soul}% http://ctan.org/pkg/soul
 %--- Suppress page numbers
 \pagestyle{empty}
 
@@ -151,11 +152,11 @@
 
   %\item \textbf{University of Santiago} \ Santiago, Chile.
 \noindent
-  \begin{tabular}{lllc}
+  \begin{tabular}{llll}
     \textbf{University of Santiago} & Santiago, Chile.& & \\
-    $\bullet$ \ \textbf{M.S.E. in Computer Science (c)}& March 2010 \textendash  \ Expected December 2017. & GPA: 5.2/7.0 & \\ [0em]
-    $\bullet$ \ \textbf{Computer Science Engineering} & March 2010 \textendash \  Expected December 2017. & GPA: 5.2/7.0 & \\ [0em]
-    $\bullet$ \ \textbf{B.S.E. in Computer Science Engineering} & March 2010 \textendash \  September 2015. & GPA: 5.2/7.0  &\\
+    \textbullet \ \textbf{M.S.E. in Computer Science (c)}& March 2010 \textendash  \ Expected December 2017. & GPA: 5.2/7.0 & \\ [0em]
+    \textbullet \ \textbf{Computer Science Engineering} & March 2010 \textendash \  Expected December 2017. & GPA: 5.2/7.0 & \\ [0em]
+    \textbullet \ \textbf{B.S.E. in Computer Science Engineering} & March 2010 \textendash \  September 2015. & GPA: 5.2/7.0  &\\
   \end{tabular}
   
   %\item \textbf{M.S.E. in Computer Science (c)}\hfil March 2010 \textendash  \ Expected December 2017. \ GPA: 5.2/7.0
@@ -189,7 +190,7 @@
     \titleExperienceWithoutLocation{Teaching Assistant}{University of Santiago}{March 2012}{December 2016}
       \begin{itemize}[label=\textbullet]
         \itemsep0em
-        \item Conducted interactive discussions on a weekly basis. Subjects: \underline{Evolutionary Computation} (2016), \underline{Programming Paradigms} (2015–2016), \underline{Methods of Programming} (2013), \underline{Linear Algebra} (2013 – 2014) \underline{Introduction to Computer Programming} (2012–2016), \underline{Calculus I} (2012–2015).
+        \item Conducted interactive discussions on a weekly basis. Subjects: \underline{\smash{Evolutionary Computation}} (2016), \ul{Programming Paradigms} (2015\ \textendash \ 2016), \underline{\smash{Methods of Programming}} (2013), \underline{\smash{Linear Algebra}} (2013\ \textendash \ 2014) \ul{Introduction to Computer Programming} (2012\ \textendash \ 2016), \underline{\smash{Calculus I}} (2012\ \textendash \ 2015).
         \item Enhanced scheduling algorithm to penalize short lived tasks to reduce wasted scheduling attempts.
       \end{itemize}
     
