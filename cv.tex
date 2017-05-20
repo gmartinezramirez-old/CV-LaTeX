@@ -43,6 +43,10 @@
   \parbox{.333\textwidth}{#1}
 }
 
+\newcommand{\textboxtwo}[1]{
+  \parbox{.49\textwidth}{#1}
+}
+
 % Make "C++" look pretty when used in text by touching up the plus signs
 \newcommand{\CPP}
 {C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
@@ -75,6 +79,7 @@
 
 \newcommand{\titleExperienceWithoutLocation}[4]{
   \vspace{1.0em}
+  
   \item[]
   {
     \textbox{\textbf{#1}\hfill}\textbox{\hfil \textbf{#2}\hfil}\hfill \textbf{\emph{#3 \textendash \ #4}}
@@ -91,6 +96,11 @@
   \\{\emph{#3} \hfill \emph{#4 \textendash \ #5}}
 }
 
+\newcommand{\educationInfo}[4]{
+  \vspace{1.0em}
+  \textbox{\textbf{#1}\hfill}\textboxtwo{\hfil #2 \textendash \ #3 \hfil}\ #4 
+}
+
 %\newcommand{\educationWithGPA}[9]{
 % \begin{tabular}{lllc} 
 % \textbf{#1}&#2& & \\
@@ -103,7 +113,7 @@
 \begin{document}
     
   \titlePersonalInfo{Gonzalo Martinez Ramirez}{Santiago, Chile}{(+56) 9 9611 2973}{github.com/gmartinezramirez}{gmartinez.cl}{gmartinezramirez@gmail.com}
-  
+  \vspace{-0.3em} 
   %\sectionTitle{About me}
   %\vspace{0.5em}
   %\noindent I'm seeking a Software Engineering position involving backend systems.
@@ -137,24 +147,28 @@
 % \end{itemize}
 %\end{itemize}
 
-%\noindent
 
-\begin{itemize}
-  \item   \begin{tabular}{lllc}
-    \textbf{University of Santiago}&Santiago, Chile.& & \\
-    $\bullet$ \textbf{M.S.E. in Computer Science (c)}& March 2010 \textendash  \ Expected December 2017. & GPA: 5.2/7.0 & \\ [0em]
-    $\bullet$ \textbf{Computer Science Engineering} & March 2010 \textendash \  Expected December 2017. & GPA: 5.2/7.0 & \\ [0em]
-    $\bullet$ \textbf{B.S.E. in Computer Science Engineering} & March 2010 \textendash \  Septiembre 2015. & GPA: 5.2/7.0  &\\
-    \end{tabular}
+
+  %\item \textbf{University of Santiago} \ Santiago, Chile.
+\noindent
+  \begin{tabular}{lllc}
+    \textbf{University of Santiago} & Santiago, Chile.& & \\
+    $\bullet$ \ \textbf{M.S.E. in Computer Science (c)}& March 2010 \textendash  \ Expected December 2017. & GPA: 5.2/7.0 & \\ [0em]
+    $\bullet$ \ \textbf{Computer Science Engineering} & March 2010 \textendash \  Expected December 2017. & GPA: 5.2/7.0 & \\ [0em]
+    $\bullet$ \ \textbf{B.S.E. in Computer Science Engineering} & March 2010 \textendash \  September 2015. & GPA: 5.2/7.0  &\\
+  \end{tabular}
+  
+  %\item \textbf{M.S.E. in Computer Science (c)}\hfil March 2010 \textendash  \ Expected December 2017. \ GPA: 5.2/7.0
+  %\item \textbf{Computer Science Engineering}\hfil March 2010 \textendash  \ Expected December 2017. \ GPA: 5.2/7.0
+  %\item \textbf{B.S.E. in Computer Science Engineering}\hfil March 2010 \textendash  \ September 2015. \ GPA: 5.2/7.0
+\begin{itemize}[leftmargin=*]
   \item  Graduate Coursework: Scalable Distributed Systems, Human Computer and Information Retrieval, Object-Oriented Programming, Evolutionary Computation.
   \item Undergraduated Coursework: Computer Architecture, Algorithms, Parallel Computing, Operating Systems, Data Structures, Distributed Systems, Compilers, Paradigms of Programming, Databases, Computational Theory.
 \end{itemize}
 
 %\vspace{0.20em}
   \vspace{0.20em} 
-  
 
-  
   \sectionTitle{Work Experience}
   \begin{itemize}[leftmargin=*]
     \parskip=-0.6em
@@ -188,19 +202,19 @@
   \sectionTitle{Projects}
   \begin{itemize}[leftmargin=*]
     \parskip=-0.6em 
-    \titleExperienceWithoutLocation{Project 1 C, \CPP}{github.com/gmartinezramirez/project1}{September 2015}{Present}
+    \titleExperienceWithoutLocation{Project 1 \ C, \CPP}{github.com/gmartinezramirez/project1}{September 2015}{Present}
       \begin{itemize}[label=\textbullet]
         \itemsep0em
         \item Contributed to internal deploy system to allow users to deploy to multiple Apache Aurora zones.
       \end{itemize}
   
-    \titleExperienceWithoutLocation{Project 2}{github.com/gmartinezramirez/project2}{August 2014}{August 2015}
+    \titleExperienceWithoutLocation{Project 2 \ C, \CPP}{github.com/gmartinezramirez/project2}{August 2014}{August 2015}
       \begin{itemize}[label=\textbullet]
         \itemsep0em
         \item Contributed usability fixes to the Apache Aurora command line client.
       \end{itemize}
 
-    \titleExperienceWithoutLocation{Project 3}{github.com/gmartinezramirez/project3}{August 2014}{August 2015}
+    \titleExperienceWithoutLocation{Project 3 \ C, \CPP}{github.com/gmartinezramirez/project3}{August 2014}{August 2015}
       \begin{itemize}[label=\textbullet]
         \itemsep0em
         \item Contributed usability fixes to the Apache Aurora command line client.
