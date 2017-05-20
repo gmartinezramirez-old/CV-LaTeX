@@ -1,7 +1,9 @@
 % NOTE: This is very inspired by http://www.toofishes.net/blog/latex-resume-follow-up/
 
 \documentclass[10pt,letterpaper]{article}
-\usepackage[margin=0.75in]{geometry}
+%\usepackage[margin=0.75in]{geometry}
+%--- Set document margins
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
 \usepackage[utf8]{inputenc}
 %--- Activation of Charter for text and CMR for math
 \usepackage[T1]{fontenc}
@@ -22,11 +24,20 @@
 %\subsectionfont{\usefont{T1}{qhv}{b}{n}}
 
 \usepackage{hyperref}
+%--- To customize lists
 \usepackage{enumitem}
+%--- Remove left margin from lists, suppress vertical item separation and set top 
+%--- separation to a negative value to suppress a single parskip before lists
+\setlist{leftmargin=*, noitemsep, topsep=-1\parskip}
 
 \usepackage{indentfirst}
 \usepackage{fmtcount}
+
+\usepackage{hyphenat}
+
+%--- Suppress page numbers
 \pagestyle{empty}
+
 
 \newcommand{\textbox}[1]{
   \parbox{.333\textwidth}{#1}
@@ -52,7 +63,7 @@
   \subsection*{\uppercase{\textbf{#1}}}
   \vspace{-0.3em}
     \hrule
-    \vspace{0.5em}  
+    %\vspace{0.5em} 
 }
 
 \newcommand{\languageSection}[4]{
@@ -105,7 +116,7 @@
   %\\
   
   \sectionTitle{Education}
-  \vspace{0.5em}  
+  \vspace{0.20em} 
 %\begin{itemize}[leftmargin=*]
 % \parskip=-0.5em 
 % \item[]
@@ -127,18 +138,22 @@
 %\end{itemize}
 
 %\noindent
-  \begin{tabular}{lllc}
+
+\begin{itemize}
+  \item   \begin{tabular}{lllc}
     \textbf{University of Santiago}&Santiago, Chile.& & \\
     $\bullet$ \textbf{M.S.E. in Computer Science (c)}& March 2010 \textendash  \ Expected December 2017. & GPA: 5.2/7.0 & \\ [0em]
     $\bullet$ \textbf{Computer Science Engineering} & March 2010 \textendash \  Expected December 2017. & GPA: 5.2/7.0 & \\ [0em]
     $\bullet$ \textbf{B.S.E. in Computer Science Engineering} & March 2010 \textendash \  Septiembre 2015. & GPA: 5.2/7.0  &\\
-  \end{tabular}
+    \end{tabular}
+  \item  Graduate Coursework: Scalable Distributed Systems, Human Computer and Information Retrieval, Object-Oriented Programming, Evolutionary Computation.
+  \item Undergraduated Coursework: Computer Architecture, Algorithms, Parallel Computing, Operating Systems, Data Structures, Distributed Systems, Compilers, Paradigms of Programming, Databases, Computational Theory.
+\end{itemize}
+
+%\vspace{0.20em}
+  \vspace{0.20em} 
   
-  \begin{description}[labelindent=\parindent]
-    \parskip=-0.6em
-    \item [Graduate Coursework:] Scalable Distributed Systems, Human Computer and Information Retrieval, Object-Oriented Programming, Evolutionary Computation.
-    \item [Undergraduated Coursework:] Computer Architecture, Algorithms, Parallel Computing, Operating Systems, Data Structures, Distributed Systems, Compilers, Paradigms of Programming, Databases, Computational Theory.
-  \end{description}
+
   
   \sectionTitle{Work Experience}
   \begin{itemize}[leftmargin=*]
@@ -148,7 +163,6 @@
         \itemsep0em
         \item Contributed to internal deploy system to allow users to deploy to multiple Apache Aurora zones.
         \item Independently worked on reducing technical debt on task specific observability tooling.
-        \item Collaborated with many engineers at Twitter to improve internal Python build hygiene.
       \end{itemize}
 
     \titleExperienceWithoutLocation{Web Developer}{Self-employed}{March 2015}{January 2017}
@@ -156,7 +170,6 @@
         \itemsep0em
         \item Contributed usability fixes to the Apache Aurora command line client.
         \item Created an analytics pipeline to gain better understanding of cluster utilization and allocation.
-        \item Worked with operators to increase overall reliability of compute cluster.
       \end{itemize}
     
     \titleExperienceWithoutLocation{Teaching Assistant}{University of Santiago}{March 2012}{December 2016}
@@ -166,18 +179,6 @@
         \item Enhanced scheduling algorithm to penalize short lived tasks to reduce wasted scheduling attempts.
       \end{itemize}
     
-    \titleExperienceWithoutLocation{Twitter}{Intern}{January 2013}{April 2013}
-      \begin{itemize}[label=\textbullet]
-        \itemsep0em
-        \item Designed and implemented a stream filtering system on top of Apache Kafka to reduce stream size.
-        \item Created a DSL for operators to filter streams of arbitrary Thrift messages.
-      \end{itemize}
-    
-    \titleExperienceWithoutLocation{DISQUS}{Intern}{May 2012}{August 2012}
-      \begin{itemize}[label=\textbullet]
-        \itemsep0em
-        \item Worked on performance measurement tools to catch regressions before systems were deployed.
-      \end{itemize}
   \end{itemize}
   
 %--TODO: Make to work with +9 parameters
@@ -230,20 +231,20 @@
     \titleExperienceWithoutLocation{Publications}{Co-Author}{}{}
       \begin{itemize}[label=\textbullet]
         \itemsep0em
-        \item Effects of Visual Representation of Search Engine Results on Performance, User Experience, and Visual Effort. ASIS\&T 2017, \ordinalnum{80} Annual Meeting of the Association for Information Science and Technology, Washington D.C (Crystal City, Virginia), USA.
+        \item Effects of Visual Representation of Search Engine Results on Performance, User Experience, and Visual Effort. ASIS\&T 2017, \ordinalnum{80}, Washington D.C (Crystal City, Virginia), USA.
       \end{itemize}
     \end{itemize} 
   
   \sectionTitle{Languages and Technologies}
-  \vspace{0.5em}
-  \begin{description}[labelindent=\parindent]
-    \parskip=-0.6em
-    %\itemsep0em
-    \item [Languages:] \textbf{Proficient:} Java, Python \textbf{Prior experience:} \CPP, Scala, Go, JavaScript
-    \item [Frameworks:] \textbf{Prior experience:} Hadoop, Spark
-    \item [Databases:] \textbf{Prior experience:} Redis, PostgreSQL, MongoDB, Cassandra
-    \item [Systems:] Apache Aurora, Apache Mesos, Docker, Private Cloud
-  \end{description}
+  \vspace{0.20em}
+  \begin{itemize}[label=\textbullet]
+    %\parskip=-0.6em
+    \itemsep0em
+    \item \textbf{Languages:} \textbf{Proficient:} Java, Python \textbf{Prior experience:} \CPP, Scala, Go, JavaScript
+    \item \textbf{Frameworks:} \textbf{Prior experience:} Hadoop, Spark
+    \item \textbf{Databases:} \textbf{Prior experience:} Redis, PostgreSQL, MongoDB, Cassandra
+    \item \textbf{Systems:} Apache Aurora, Apache Mesos, Docker, Private Cloud
+  \end{itemize}
   
   \languageSection{Spanish}{native}{English}{work level}
   
