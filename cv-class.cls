@@ -42,6 +42,8 @@
 \usepackage{soul}
 \setul{1pt}{.4pt}
 
+\setitemize{labelsep=0.4em,leftmargin=*}
+
 %--- Suppress page numbers
 \pagestyle{empty}
 

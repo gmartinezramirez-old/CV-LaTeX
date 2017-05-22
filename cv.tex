@@ -35,9 +35,10 @@
 
 \usepackage{hyphenat}
 %--- More control to underline
-%--- Hyphen with underline
-\usepackage{soul}
-\setul{1pt}{.4pt}
+\usepackage{soul}% http://ctan.org/pkg/soul
+
+%--- Flexible tables
+\usepackage{tabu}
 
 %--- Suppress page numbers
 \pagestyle{empty}
@@ -114,10 +115,20 @@
  %   \end{tabular}
 %} 
 
-
+\setul{1pt}{.4pt}
+\setitemize{labelsep=0.4em,leftmargin=*}
 
 \begin{document}
-    
+  
+  %\begin{center}
+  % Gonzalo Martinez
+  %\end{center}
+  %\begin{center}
+  %\begin{tabu} to 1\textwidth { X[l,m] X[2,c,m] X[r,m] }
+  %   hola & hola 2 & hola 3 \\
+  %\end{tabu} 
+  %\end{center}
+  
   \titlePersonalInfo{Gonzalo Martinez Ramirez}{Santiago, Chile}{(+56) 9 9611 2973}{github.com/gmartinezramirez}{gmartinez.cl}{gmartinezramirez@gmail.com}
   
   \vspace{-0.3em} 
@@ -135,11 +146,12 @@
   \sectionTitle{Education}
   \vspace{0.20em} 
 
-  \begin{tabular}{llll}
+  \hspace*{-0.84cm}
+  \begin{tabular}[t]{llll}
     \textbf{University of Santiago} & Santiago, Chile.& & \\
-    \textbullet \ \textbf{M.S.E. in Computer Science (c)}& March 2010 \textendash  \ Expected December 2017. & GPA: 5.2/7.0 & \\ [0em]
-    \textbullet \ \textbf{Computer Science Engineering} & March 2010 \textendash \  Expected December 2017. & GPA: 5.2/7.0 & \\ [0em]
-    \textbullet \ \textbf{B.S.E. in Computer Science Engineering} & March 2010 \textendash \  September 2015. & GPA: 5.2/7.0  &\\
+    \textbullet\hspace{0.4em}\textbf{M.S.E. in Computer Science (c)}& March 2010 \textendash  \ Expected December 2017. & GPA: 5.2/7.0 & \\ [0em]
+    \textbullet\hspace{0.4em}\textbf{Computer Science Engineering} & March 2010 \textendash \  Expected December 2017. & GPA: 5.2/7.0 & \\ [0em]
+    \textbullet\hspace{0.4em}\textbf{B.S.E. in Computer Science Engineering} & March 2010 \textendash \  September 2015. & GPA: 5.2/7.0  &\\
   \end{tabular}
   \begin{itemize}[leftmargin=*]
     \item Graduate Coursework: Scalable Distributed Systems, Human Computer and Information Retrieval, Object-Oriented Programming, Evolutionary Computation.
@@ -149,7 +161,7 @@
   \vspace{0.20em} 
 
   \sectionTitle{Work Experience}
-  \begin{itemize}[leftmargin=*]
+  \begin{itemize}
     \parskip=-0.6em
     \titleExperienceWithoutLocation{Research Assistant}{University of Santiago}{March 2016}{Present}
       \begin{itemize}[label=\textbullet]
@@ -171,7 +183,6 @@
         \item Conducted interactive discussions on a weekly basis. Subjects: \ul{Evolutionary Computation} (2016), \ul{Programming Paradigms} (2015\ \textendash \ 2016), \ul{Methods of Programming} (2013), \ul{Linear Algebra} (2013\ \textendash \ 2014) \ul{Introduction to Computer Programming} (2012\ \textendash \ 2016), \ul{Calculus I} (2012\ \textendash \ 2015).
         \item Enhanced scheduling algorithm to penalize short lived tasks to reduce wasted scheduling attempts.
       \end{itemize}
-    
   \end{itemize}
   
 %--TODO: Make to work with +9 parameters
@@ -179,7 +190,7 @@
   %\noindent
 
   \sectionTitle{Projects}
-  \begin{itemize}[leftmargin=*]
+  \begin{itemize}
     \parskip=-0.6em 
     \titleExperienceWithoutLocation{Project 1 \ C, \CPP}{github.com/gmartinezramirez/project1}{September 2015}{Present}
       \begin{itemize}[label=\textbullet]
@@ -201,7 +212,7 @@
   \end{itemize}
 
   \sectionTitle{Events and Organizations}
-  \begin{itemize}[leftmargin=*]
+  \begin{itemize}
     \parskip=-0.6em 
     \titleExperienceWithoutLocation{Active Member}{GNU/Linux University Community}{September 2015}{Present}
       \begin{itemize}[label=\textbullet]
