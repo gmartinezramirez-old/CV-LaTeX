@@ -3,7 +3,8 @@
 \documentclass[10pt,letterpaper]{article}
 %\usepackage[margin=0.75in]{geometry}
 %--- Set document margins
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
+%--- Before top=0.6in, bottom=0.6in
+\usepackage[left=0.75in,top=0.5in,right=0.75in,bottom=0.5in]{geometry}
 \usepackage[utf8]{inputenc}
 %--- Activation of Charter for text and CMR for math
 \usepackage[T1]{fontenc}
@@ -32,11 +33,9 @@
 
 \usepackage{indentfirst}
 \usepackage{fmtcount}
-
 \usepackage{hyphenat}
 %--- More control to underline
-\usepackage{soul}% http://ctan.org/pkg/soul
-
+\usepackage{soul}
 %--- Flexible tables
 \usepackage{tabu}
 
@@ -52,17 +51,16 @@
   \parbox{.49\textwidth}{#1}
 }
 
-% Make "C++" look pretty when used in text by touching up the plus signs
+%--- Make "C++" look pretty when used in text by touching up the plus signs
 \newcommand{\CPP}
 {C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
 
 \newcommand{\titlePersonalInfo}[6]{
   \begin{center}{\huge \textbf{#1}}
-  \\  #2 \ \ \textbullet
-    \ \ #3\ \ \textbullet
-    \ \ #4\ \ \textbullet
-    \ \ #5\ \ \textbullet
-    \ \ #6    
+  \\#2\hspace{0.4em}
+  \textbullet\hspace{0.4em}#3\hspace{0.4em}
+  \textbullet\hspace{0.4em}#4\hspace{0.4em}
+  \textbullet\hspace{0.4em}#5\hspace{0.4em} 
   \end{center}
 }
 
@@ -72,7 +70,7 @@
   \subsection*{\uppercase{\textbf{#1}}}
   \vspace{-0.3em}
     \hrule
-    %\vspace{0.5em} 
+    \vspace{0.3em}  
 }
 
 \newcommand{\languageSection}[4]{
@@ -84,7 +82,6 @@
 
 \newcommand{\titleExperienceWithoutLocation}[4]{
   \vspace{1.0em}
-  
   \item[]
   {
     \textbox{\textbf{#1}\hfill}\textbox{\hfil \textbf{#2}\hfil}\hfill \textbf{\emph{#3 \textendash \ #4}}
@@ -129,7 +126,7 @@
   %\end{tabu} 
   %\end{center}
   
-  \titlePersonalInfo{Gonzalo Martinez Ramirez}{Santiago, Chile}{(+56) 9 9611 2973}{github.com/gmartinezramirez}{gmartinez.cl}{gmartinezramirez@gmail.com}
+  \titlePersonalInfo{Gonzalo Martinez Ramirez}{Santiago, Chile}{(+56) 9 9611 2973}{gmartinezramirez@gmail.com}{gmartinez.cl}
   
   \vspace{-0.3em} 
   %\sectionTitle{About me}
@@ -156,40 +153,46 @@
   \begin{itemize}[leftmargin=*]
     \item Graduate Coursework: Scalable Distributed Systems, Human Computer and Information Retrieval, Object-Oriented Programming, Evolutionary Computation.
     \item Undergraduated Coursework: Computer Architecture, Algorithms, Parallel Computing, Operating Systems, Data Structures, Distributed Systems, Compilers, Paradigms of Programming, Databases, Computational Theory.
+    %\item Awards: 
   \end{itemize}
 
-  \vspace{0.20em} 
-
+  %\vspace{0.20em}  
+  \vspace{0.30em} 
+  
   \sectionTitle{Work Experience}
-  \begin{itemize}
-    \parskip=-0.6em
+  \noindent For all experience look at https://gmartinez.cl
+  \vspace{-0.9em}
+  \begin{itemize}[noitemsep,topsep=0pt]
+    %\parskip=-0.3em
     \titleExperienceWithoutLocation{Research Assistant}{University of Santiago}{March 2016}{Present}
-      \begin{itemize}[label=\textbullet]
-        \itemsep0em
+      \begin{itemize}[label=\textbullet,noitemsep,topsep=0pt]
+      %\begin{itemize}[label=\textbullet]
+        %\itemsep0em
         \item Contributed to internal deploy system to allow users to deploy to multiple Apache Aurora zones.
         \item Independently worked on reducing technical debt on task specific observability tooling.
       \end{itemize}
 
+    \vspace{-0.4em} 
     \titleExperienceWithoutLocation{Web Developer}{Self-employed}{March 2015}{January 2017}
-      \begin{itemize}[label=\textbullet]
-        \itemsep0em
+      \begin{itemize}[label=\textbullet,noitemsep,topsep=0pt]
+        %\itemsep0em
         \item Contributed usability fixes to the Apache Aurora command line client.
         \item Created an analytics pipeline to gain better understanding of cluster utilization and allocation.
       \end{itemize}
     
+    \vspace{-0.4em} 
     \titleExperienceWithoutLocation{Teaching Assistant}{University of Santiago}{March 2012}{December 2016}
       \begin{itemize}[label=\textbullet]
         \itemsep0em
-        \item Conducted interactive discussions on a weekly basis. Subjects: \ul{Evolutionary Computation} (2016), \ul{Programming Paradigms} (2015\ \textendash \ 2016), \ul{Methods of Programming} (2013), \ul{Linear Algebra} (2013\ \textendash \ 2014) \ul{Introduction to Computer Programming} (2012\ \textendash \ 2016), \ul{Calculus I} (2012\ \textendash \ 2015).
+        \item Conducted interactive discussions on a weekly basis. Subjects: \ul{Evolutionary Computation} (2016), \ul{Programming Paradigms} (2015\ \textendash \ 2016), \ul{Methods of Programming} (2013), \ul{Linear Algebra} (2013\ \textendash \ 2014), \ul{Introduction to Computer Programming} (2012\ \textendash \ 2016), \ul{Calculus I} (2012\ \textendash \ 2015).
         \item Enhanced scheduling algorithm to penalize short lived tasks to reduce wasted scheduling attempts.
       \end{itemize}
   \end{itemize}
+  \vspace{0.30em} 
   
-%--TODO: Make to work with +9 parameters
-% \educationWithGPA{University of Santiago}{Santiago, Chile}{M.S. in Computer Science (c)}{March 2010}{Expected December 2017}{5.2}{Computer Science Engineering}{March 2010}{Expected December 2017}{5.2}{B.S. in Engineering}{March 2010}{Septiembre 2015}{5.2}
-  %\noindent
-
-  \sectionTitle{Projects}
+  \sectionTitle{Independent Projects}
+  \noindent All the projects listed below and more are available at https://github.com/gmartinezramirez/
+  \vspace{-0.9em}
   \begin{itemize}
     \parskip=-0.6em 
     \titleExperienceWithoutLocation{Project 1 \ C, \CPP}{github.com/gmartinezramirez/project1}{September 2015}{Present}
@@ -198,20 +201,30 @@
         \item Contributed to internal deploy system to allow users to deploy to multiple Apache Aurora zones.
       \end{itemize}
   
+    \vspace{-0.4em} 
     \titleExperienceWithoutLocation{Project 2 \ C, \CPP}{github.com/gmartinezramirez/project2}{August 2014}{August 2015}
       \begin{itemize}[label=\textbullet]
         \itemsep0em
         \item Contributed usability fixes to the Apache Aurora command line client.
       \end{itemize}
 
+    \vspace{-0.4em} 
     \titleExperienceWithoutLocation{Project 3 \ C, \CPP}{github.com/gmartinezramirez/project3}{August 2014}{August 2015}
       \begin{itemize}[label=\textbullet]
         \itemsep0em
         \item Contributed usability fixes to the Apache Aurora command line client.
       \end{itemize}
+    \vspace{-0.4em} 
+    \titleExperienceWithoutLocation{Project 4 \ C, \CPP}{github.com/gmartinezramirez/project4}{August 2014}{August 2015}
+    \begin{itemize}[label=\textbullet]
+      \itemsep0em
+      \item Contributed usability fixes to the Apache Aurora command line client.
+    \end{itemize}
   \end{itemize}
 
+  \vspace{0.30em} 
   \sectionTitle{Events and Organizations}
+  \vspace{-0.8em}
   \begin{itemize}
     \parskip=-0.6em 
     \titleExperienceWithoutLocation{Active Member}{GNU/Linux University Community}{September 2015}{Present}
@@ -220,24 +233,29 @@
         \item Contributed to internal deploy system to allow users to deploy to multiple Apache Aurora zones.
       \end{itemize}
   
+    \vspace{-0.4em} 
     \titleExperienceWithoutLocation{Team Member}{Facebook Hackathon}{September 2015}{Present}
       \begin{itemize}[label=\textbullet]
         \itemsep0em
         \item Contributed to internal deploy system to allow users to deploy to multiple Apache Aurora zones.
       \end{itemize}
   
+    \vspace{-0.4em} 
     \titleExperienceWithoutLocation{Team Member}{NASA Space Apps Hackathon}{August 2014}{August 2015}
       \begin{itemize}[label=\textbullet]
         \itemsep0em
         \item Contributed usability fixes to the Apache Aurora command line client.
       \end{itemize}
 
+    \vspace{-0.4em} 
     \titleExperienceWithoutLocation{Publications}{Co-Author}{}{}
       \begin{itemize}[label=\textbullet]
         \itemsep0em
         \item Effects of Visual Representation of Search Engine Results on Performance, User Experience, and Visual Effort. ASIS\&T 2017, \ordinalnum{80} Annual Meeting of the Association, Washington D.C (Crystal City, Virginia), USA.
       \end{itemize}
     \end{itemize} 
+  \vspace{0.30em} 
+  
   
   \sectionTitle{Languages and Technologies}
   \vspace{0.20em}
