@@ -67,16 +67,16 @@
 \newcommand{\sectionTitle}[1]{
   \hrule
   \vspace{-1.0em} 
-  \subsection*{\uppercase{\textbf{#1}}}
+  \subsection*{\uppercase{\textbf{#1}} }
   \vspace{-0.3em}
     \hrule
     \vspace{0.3em}  
 }
 
-\newcommand{\sectionTitleWithWebsite}[2]{
+\newcommand{\sectionTitleWithWeb}[2]{
   \hrule
   \vspace{-1.0em} 
-  \subsection*{\uppercase{\textbf{#1}} hola}
+  \subsection*{\uppercase{\textbf{#1}} \hfill{\small \textit{(more at #2)}}}
   \vspace{-0.3em}
   \hrule
   \vspace{0.3em}  
@@ -173,7 +173,8 @@
   %\vspace{0.20em}  
   \vspace{0.30em} 
   
-  \sectionTitle{Work Experience}
+  %\sectionTitle{Work Experience}
+  \sectionTitleWithWeb{Work Experience}{https://gmartinezramirez.github.io}
   %\noindent For all experience look at https://gmartinezramirez.github.io/
   \vspace{-1.1em}
   \begin{itemize}[noitemsep,topsep=0pt]
@@ -204,8 +205,8 @@
       \end{itemize}
   \end{itemize}
   \vspace{0.30em} 
-  
-  \sectionTitle{Independent Projects}
+
+  \sectionTitleWithWeb{Independent Projects}{https://gmartinezramirez.github.io/projects}
   %\noindent For all projects look at https://gmartinezramirez.github.io/projects/
   %(more at https://gmartinezramirez.github.io/projects/)
   \vspace{-0.9em}
@@ -243,13 +244,8 @@
   \vspace{-0.8em}
   \begin{itemize}
     \parskip=-0.6em 
-    \titleExperienceWithoutLocation{Active Member}{GNU/Linux University Community}{September 2015}{Present}
-      \begin{itemize}[label=\textbullet]
-        \itemsep0em
-        \item Working with volunteers in the organization of events and talks about Free Software philosophy and programs including tutorials about installation of GNU/Linux distributions.
-      \end{itemize}
   
-    \vspace{-0.6em} 
+    %\vspace{-0.6em}  
     \titleExperienceWithoutLocation{Team Member}{Facebook Hackathon}{Chile \textendash \ 24 Hours}{April 2017}
       \begin{itemize}[label=\textbullet]
         \itemsep0em
@@ -262,6 +258,12 @@
         \itemsep0em
         \item We developed a firespread simulator of a chat which can be used without Internet.
       \end{itemize}
+
+    \titleExperienceWithoutLocation{Active Member}{GNU/Linux University Community}{December 2012}{March 2015}
+\begin{itemize}[label=\textbullet]
+  \itemsep0em
+  \item Working with volunteers in the organization of events and talks about Free Software philosophy and programs including tutorials about installation of GNU/Linux distributions.
+\end{itemize}
 
     \vspace{-0.6em} 
     \titleExperienceWithoutLocation{Publications}{Co-Author}{}{}
