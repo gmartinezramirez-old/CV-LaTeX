@@ -1,0 +1,123 @@
+% NOTE: This is very inspired by http://www.toofishes.net/blog/latex-resume-follow-up/
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage{cv-format}
+
+
+%--------------------------------------------------------------------------------
+%                            Sections and Subsections                           -
+%--------------------------------------------------------------------------------
+
+\begin{document}
+	
+	\titlePersonalInfo{Gonzalo Martinez Ramirez}{Santiago, Chile}{(+56) 9 9611 2973}{gonzalo.martinez.ra@gmail.com}{github.com/gmartinezramirez}
+
+	\noindent Master in Computer Science (c) with 3 years of experience doing lectures for the Computer Architecture class for more than 60 students every semester, publishing and researching new communication protocols for mobile devices with two PhDs. Of the university and doing an internship in INRIA, France working with a post-doc and the director of OCamlPro in the OCaml's package manager.
+
+	\vspace{\separationAfterHeaderBeforeItem}
+	\header{Educación}
+	\vspace{\separationAfterHeader}
+	\hspace{\hseparationBeforeTabular}
+	\begin{tabular}[t]{llll}
+		\textbf{Universidad de Santiago de Chile} & Santiago, Chile.& & \\
+		\textbullet\hspace{0.4em}\textbf{Magíster en Ingeniería Informática (c)}& Mar. 2010 \textendash  \ Expected Mar. 2018. &\\ [0em]
+		\textbullet\hspace{0.4em}\textbf{Ingeniería Civil en Informática} & Mar. 2010 \textendash \  Expected Mar. 2018. &\\ [0em]
+		\textbullet\hspace{0.4em}\textbf{Licenciado en Ciencias de la Ingeniería} & Mar. 2010 \textendash \  Sep. 2015. &\\
+	\end{tabular}
+
+	\headerWithWeb{Experiencia Laboral}{https://gmartinezramirez.github.io}
+	\vspace{\separationAfterHeaderBeforeItem}
+	\begin{itemize}[noitemsep,topsep=0pt]
+		\titleExperienceWithoutLocation{Research Assistant}{University of Santiago}{marzo 2016}{presente}
+			\begin{itemize}[label=\textbullet,noitemsep,topsep=0pt]
+				\item Reduced time stream processing applications by 40\% by implementing a processing architecture in mobile devices.
+				\item Builted a web platform that enables the capture of data and search information relevant to user behaviors in online search environments. Deployed on schools of Finland and Chile.
+			\end{itemize}
+
+		\vspace{\separationBetweenItems}
+
+		\titleExperienceWithoutLocation{Web Developer}{Self-employed}{marzo 2015}{enero 2017}
+			\begin{itemize}[label=\textbullet,noitemsep,topsep=0pt]
+				\item Gathered requirements, planned and developed responsive websites using PHP, JavaScript, HTML and CSS.
+				\item Performed validation and testing of finished websites thereby achieving the client objective before the deadline.
+			\end{itemize}
+		
+		\vspace{\separationBetweenItems}
+		\titleExperienceWithoutLocation{Ayudante}{Universidad de Santiago}{marzo 2012}{diciembre 2016}
+			\begin{itemize}[label=\textbullet]
+				\itemsep0em
+				\item Conducted interactive discussions on a weekly basis and assisting them through question clarification. Subjects: \ul{Computaci\'on Evolutiva} (2016), \ul{Paradigmas de la Programaci\'on} (2015\ \textendash \ 2016), \ul{M\'etodos de Programaci\'on} (2013), \ul{\'Algebra Lineal} (2013\ \textendash \ 2014), \ul{Fundamentos de Programaci\'on} (2012\ \textendash \ 2016), \ul{C\'alculo I} (2012\ \textendash \ 2015).
+			\end{itemize}
+	\end{itemize}
+
+	\headerWithWeb{Proyectos Independientes}{https://gmartinezramirez.github.io/projects}
+	\vspace{\separationAfterHeaderBeforeItem}
+	\begin{itemize}
+		\parskip=-0.6em 
+		\titleExperienceTwoColumns{Disaster Needs Detection \sl Java, Scala, Storm}{github.com/gmartinezramirez/need}
+			\begin{itemize}[label=\textbullet]
+				\itemsep0em
+				\item Real time app which harnesses the continual social media information to rapidly detect needs in disaster events. Use of the Twitter API for mining Tweets to be feed into a machine learning classifier achieving 80\% of precision.
+			\end{itemize}
+		\vspace{\separationBetweenItems}
+		
+		\titleExperienceTwoColumns{Healthy Food \sl Java, Android}{github.com/gmartinezramirez/ishealthy}
+		\begin{itemize}[label=\textbullet]
+			\itemsep0em
+			\item Android app that classify food photos to indicate if is healthy or junk food using Microsoft Computer Vision API.
+		\end{itemize}
+		
+		\vspace{\separationBetweenItems}	
+		\titleExperienceTwoColumns{C Compiler (Present) \sl Python}{github.com/gmartinezramirez/c-py}
+		\begin{itemize}[label=\textbullet]
+			\itemsep0em
+			\item A basic C language compiler written in Python. Including Parser, Semantic Analyser, Intermediate Code Generator.
+		\end{itemize}
+		
+		\vspace{\separationBetweenItems}
+		\titleExperienceTwoColumns{File Splitter Recover (Coursework) \sl \CPP}{github.com/gmartinezramirez/File-Splitter}
+		\begin{itemize}[label=\textbullet]
+			\itemsep0em
+			\item File splitter and joining that maintains the consistency of the data in case of lost divided parts and joining again.
+		\end{itemize}
+	\end{itemize}
+	
+	\header{Actividades}
+	\vspace{\separationAfterHeaderBeforeItem}
+	\begin{itemize}
+		\parskip=\separationBetweenItems
+		\titleExperienceWithoutLocation{Team Member \quad React Native}{Facebook Hackathon}{Chile \textendash \ 24 Hours}{Apr. 2017}
+			\begin{itemize}[label=\textbullet]
+				\itemsep0em
+				\item Developed a Android chat application that communicate users without Internet, using Delay Tolerant Networks.
+			\end{itemize}
+	
+		\vspace{\separationBetweenItems}	
+		\titleExperienceWithoutLocation{Team Member \quad React Native}{NASA Space Apps Hackathon}{Chile \textendash \ 36 Hours}{Apr. 2017}
+			\begin{itemize}[label=\textbullet]
+				\itemsep0em
+				\item Developed a fire spread simulator based on satellite data that also indicates the safest evacuation route in a map.
+			\end{itemize}
+
+		\vspace{\separationBetweenItems}	
+		\titleExperienceWithoutDate{Publicaciones}{Coautor}
+			\begin{itemize}[label=\textbullet]
+				\itemsep0em
+				\item Effects of Visual Representation of Search Engine Results on Performance, User Experience, and Visual Effort. ASIS\&T 2017, \ordinalnum{80} Annual Meeting of the Association, Washington D.C (Crystal City, Virginia), USA.
+			\end{itemize}
+		\end{itemize}	
+
+	\header{Habilidades}
+	\vspace{\separationBetweenSections}	
+	\hspace{\hseparationBeforeTabular}
+		\begin{tabular}{ l l }
+		\textbullet\hspace{0.4em}\textbf{Programación (Eficiente):} & Java, Python \\
+		\textbullet\hspace{0.4em}\textbf{Programación (Experiencia previa):} & \CPP, Scala, JavaScript, Go \\
+		\textbullet\hspace{0.4em}\textbf{Librerías/Plataformas:} & Node.js, Express, Flask, Django, Hadoop, Spark \\
+		\textbullet\hspace{0.4em}\textbf{Machine Learning:} & TensorFlow \\
+		\textbullet\hspace{0.4em}\textbf{Base de Datos:} &SQL, PostgreSQL, MongoDB, Redis \\
+		\end{tabular}
+	
+	\languageSectionSpanish{Español}{nativo}{Inglés}{nivel de trabajo}
+	
+\end{document}
